@@ -21,7 +21,8 @@ function decodeBencode(bencodedValue){
         throw new Error("Código bencode inválido!");
       }
 
-      // proximo -> extrair a "string" e converter para integer
+      return bencodedValue.substring(firstColonIndex + 1, secondColonIndex); 
+
     }else{
       throw new Error("Código bencode inválido!")
     }
